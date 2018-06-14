@@ -49,7 +49,7 @@ Your instructor should provide you with a Hubot and an API token; be sure to hav
 
 7. **Install hubot-slack dependency and save it to your package.json:**
 
-    `npm install hubot-slack --save`
+    `npm install hubot-slack --save --registry https://registry.npmjs.org/`
 
 8. **Remove the `hubot-scripts.json` file**
 
