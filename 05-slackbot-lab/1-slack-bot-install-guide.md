@@ -23,21 +23,21 @@ Your instructor should provide you with a Hubot and an API token; be sure to hav
 
     Then execute the following command to create a new folder named `myhubot`:
 
-     `$ mkdir myhubot`
+     `mkdir myhubot`
 
 4. **Move into that new directory:**
 
-    `$ cd myhubot`
+    `cd myhubot`
 
 5. **Install Hubot and its dependencies (CoffeeScript, Yeoman, and the Hubot generator):**
 
-    `$ sudo npm install -g hubot coffee-script yo generator-hubot --registry https://registry.npmjs.org/`
+    `sudo npm install -g hubot coffee-script yo generator-hubot --registry https://registry.npmjs.org/`
     
     It will ask you to enter your password. Type your password (**NOTE: NOTHING WILL SHOW WHEN YOU TYPE.** Bad UX, I know; but it is working.)
 
 6. **Using Yeoman, generate a Hubot bot:**
 
-    `$ yo hubot --adapter="slack"`
+    `yo hubot --adapter="slack"`
 
     This will prompt you to answer a few questions about your bot:
 
@@ -59,42 +59,42 @@ Your instructor should provide you with a Hubot and an API token; be sure to hav
 
 9. **Initialize your local repository:**
 
-    `$ git init`
+    `git init`
 
 10. **Add all of your new files:**
 
-    `$ git add .`
+    `git add .`
 
 11. **Commit your new files:**
 
-    `$ git commit -m "Initial Commit"`
+    `git commit -m "Initial Commit"`
 
 12. **Create a new app on Heroku:**
 
-    `$ heroku login`
+    `heroku login`
 
     then enter the email and password you used when setting up your Heroku account.
 
     You should see a confirmation that you are logged in, showing your email address.
 
-    `$ heroku create myhubotapp`
+    `heroku create <**YOUR APP NAME**>`
 
-    where `myhubotapp` is a unique app name; any app name already used by a heroku user will fail with "Name is already taken." 
+    where `<**YOUR APP NAME**>` is a unique app name; any app name already used by a heroku user will fail with "Name is already taken." 
     If this happens, just repeat the command with a different app name. (The more unusual the name, the more likely it is to be unique.)
 
 13. **Add the following configs for Slack:**
 
-    `$ heroku config:add HEROKU_URL=https://myhubotapp.herokuapp.com`
+    `heroku config:add HEROKU_URL=https://<**YOUR APP NAME**>.herokuapp.com`
 
-    where `myhubotapp` is the app name you created and used in the previous 2 steps
+    where `<**YOUR APP NAME**>` is the app name you created and used in the previous 2 steps
 
-    `$ heroku config:add HUBOT_SLACK_TOKEN=YourTokenGoesHere`
+    `heroku config:add HUBOT_SLACK_TOKEN=YourTokenGoesHere`
 
     where `YourTokenGoesHere` is the API token provided by the instructor
 
 14. **Push all your code up to Heroku**
 
-    `$ git push heroku master`
+    `git push heroku master`
 
     NOTE: If you get an error message that your build has failed, complete the following:
 
