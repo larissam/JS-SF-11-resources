@@ -31,7 +31,7 @@ Your instructor should provide you with a Hubot and an API token; be sure to hav
 
 5. **Install Hubot and its dependencies (CoffeeScript, Yeoman, and the Hubot generator):**
 
-    `$ sudo npm install -g hubot coffee-script yo generator-hubot`
+    `$ sudo npm install -g hubot coffee-script yo generator-hubot --registry https://registry.npmjs.org/`
     
     It will ask you to enter your password. Type your password (**NOTE: NOTHING WILL SHOW WHEN YOU TYPE.** Bad UX, I know; but it is working.)
 
