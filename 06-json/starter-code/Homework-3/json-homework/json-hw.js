@@ -9,8 +9,6 @@ const jsonString = '{ "title": "Uploads from everyone", "link": "https://www.fli
 1. Convert the string `jsonString` to a JavaScript object and store it in a 
 variable called `flickrObj`
 */
-const flickrObj = JSON.parse(jsonString);
-console.log(flickrObj);
 
 
 
@@ -24,17 +22,9 @@ the following:
 
 */
 
-flickrObj.items.forEach(function(photo){
-    console.log(photo.title);
-});
 
 
 /*
 3. Create a new array called 'links'. Iterate through the items array in 
 flickrObj and store the the links to each item in the 'links' array.
 */
-
-const links = [];
-flickrObj.items.forEach(function(photo){
-    links.push(photo.link);
-});
