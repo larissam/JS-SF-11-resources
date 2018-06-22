@@ -3,10 +3,8 @@
 ////////////
 
 /* Step 1a
-
-Below the let statement below, add a statement that sets the value of the firstItem variable to reference the first list item in the unordered list
+Make firstItem equal the first list item. (ie. How do we select the first list item?)
 (HINT: Use the querySelector() method.)
-
 */
 
 let firstItem;
@@ -16,38 +14,32 @@ let firstItem;
 
 
 /* Step 1b
-
-Write a statement that logs firstItem's className property to the console.
+Log firstItem's className property to the console.
 (HINT: Use the className property)
-
 */
 
 
 
 
 /* Step 1c
-
-Write a statement that adds the 'highlight' class to firstItem.
+Add the 'highlight' class to firstItem.
 (HINT: Use the classList property's add method.)
-
 */
 
 
 
 
 /* Step 1d
-
-Verify in the browser window that the first item in the list of parks now has a yellow background.
-
+If you did it correctly, the first list item should have a yellow background.
 */
 
-/* Step 1e
 
+
+/* Step 1e
 Think about user interfaces you've seen or created that change the background of a web page element. List 2 situations where you've used this technique or seen it done:
 
 1. 
 2. 
-
 */
 
 
@@ -56,9 +48,7 @@ Think about user interfaces you've seen or created that change the background of
 ////////////
 
 /* Step 2a
-
-Write a statement that logs the class value of the element referenced by firstItem to the console.
-
+Log firstItem's className to the console.
 */
 
 
@@ -67,40 +57,31 @@ Write a statement that logs the class value of the element referenced by firstIt
 
 
 /* Step 2b
-
-Write a statement that adds the 'hidden' class to firstItem.
+Add the 'hidden' class to firstItem.
 (HINT: Use the classList property's add method.)
-
 */
 
 
 
 /* Step 2c
-
-Verify that the first list item ("Buena Vista Park") is no longer displayed.
-
+Make sure the first list item ("Buena Vista Park") is no longer displayed.
 */
 
 
 /* Step 2d
-
-Write a statement that removes the 'hidden' class from firstItem.
+Remove the 'hidden' class from firstItem.
 (HINT: Use the classList property's remove method.)
-
 */
-
 
 
 
 
 /* Step 2e
-
-Verify that the first list item ("Buena Vista Park") is once again displayed.
-
+Make sure that the first list item ("Buena Vista Park") is once again displayed.
 */
 
-/* Step 2f
 
+/* Step 2f
 Think about user interfaces you've seen or created that change whether a web page element is hidden or displayed. List 2 situations where you've used this technique or seen it done:
 
 1. 
