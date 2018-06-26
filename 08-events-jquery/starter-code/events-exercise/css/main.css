@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Global Overrides
+========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+/* ==========================================================================
+   Global Styles
+========================================================================== */
+html {
+	font-size: 16px;
+}
+
+body {
+	text-align: center;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+
+/* ==========================================================================
+   Header Styles
+========================================================================== */
+header {
+	background-color: #F7F7F7;
+	padding-bottom:  3.75rem;
+}
+
+h1 {
+	font-family: 'Libre Baskerville', serif;
+	color: #401935;
+	font-size:  3.75rem;
+}
+
+header p {
+	display: inline-block;
+	border: 1px solid black;
+	max-width: 30%;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 1rem;
+	color: #222;
+	text-transform: none;
+	font-weight: 400;
+	letter-spacing: 0;
+	padding: 1em;
+	line-height: 1.5;
+	margin: 1em;
+}
+
+.blocks {
+	padding: 1.875rem 1.25rem;
+	color: white;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.block {
+	min-width: 22%;
+	min-height: 6em;
+	margin: 1em;
+}
+
+#redBtn {
+	background-color: rgba(255,0,0,0.3);
+}
+#blueBtn {
+	background-color: rgba(0,0,255,0.3);
+}
+#yellowBtn {
+	background-color: rgba(255,255,0,0.3);
+}
+
+#redBlock {
+	background-color: red;
+}
+#blueBlock {
+	background-color: blue;
+}
+#yellowBlock {
+	background-color: yellow;
+}
+
+.hidden {
+	display: none;
+}
