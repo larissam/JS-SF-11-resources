@@ -1,0 +1,13 @@
+- Is "data" a global or local variable?
+- Why do we define the "service" variable with "const" and the "data" variable with "let"?
+- What is the purpose of the code on line 71?
+- Which line has the closing parenthesis that matches the FIRST open parenthesis on line 74?
+- What does the Object.keys() method on line 80 do?
+- Which line has the opening curly brace that matches the closing curly brace on line 97?
+- What type of elements are you appending to the DOM when the data in Firebase changes?
+- Are we using event delegation on line 100? How can we tell?
+- Which line has the closing curly brace that matches the opening curly brace on line 108?
+- Which lines correspond to the "create" operation in CRUD?
+- Which lines correspond to the "read" operation in CRUD?
+- Which lines correspond to the "update" operation in CRUD?
+- Which lines correspond to the "delete" operation in CRUD?

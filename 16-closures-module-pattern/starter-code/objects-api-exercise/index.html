@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .pokeball {
+      background-color: red;
+      border-radius: 50%;
+      height: 100px;
+      width: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      animation: loading 3s infinite;
+    }
+
+    .pokeball:before {
+      content: "";
+      height: 30px;
+      width: 30px;
+      background-color: red;
+      border: 5px solid white;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .pokeball:after {
+      content: "";
+      width: 100px;
+      height: 7px;
+      background-color: white;
+      position: absolute;
+    }
+
+    @keyframes loading {
+      0% {
+        transform: rotate(0deg);
+      }
+      
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    #popup {
+      background-color: cornsilk;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+    #close {
+      margin: 20px;
+      float: right;
+      font-size: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Here are some Pokemon:</h1>
+  <ul id="pokemon">
+  </ul>
+  <div id="popup" class="hidden">
+    <div id="close">X</div>
+    <div id="sprite"></div>
+    <img src="http://pokeapi.co/media/sprites/pokemon/12.png" />
+  </div>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <!-- js -->
+  <script src="app.js"></script>
+</body>
+</html>
