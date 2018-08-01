@@ -1,0 +1,15 @@
+.article {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+}
+
+.article-title {
+  color: #FE052C;
+}
+
+.article-thumbnail {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  padding: 20px;
+}

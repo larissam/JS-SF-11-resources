@@ -1,0 +1,29 @@
+.dropdown {
+  background-color: #CC0020;
+  color: white;
+  min-width: 200px;
+  position: relative;
+}
+
+.dropdown-selected-item, .dropdown-option {
+  padding: 0.75rem;
+}
+
+.dropdown-selected-item:hover, .dropdown-option:hover {
+  background-color: white;
+  color: #CC0020;
+  cursor: pointer;
+}
+
+.dropdown.open .dropdown-options{
+  display: block;
+}
+
+.dropdown-options {
+  background-color: #CC0020;
+  display: none;
+  min-width: 75%;
+  position: absolute;
+  right: 0;
+  top: 100%;
+}

@@ -1,0 +1,15 @@
+- What components does this app have? List them all out.
+- Go through the list of components you have. For each component, answer the following questions: 
+    - What props does it have?
+    - What state does it have (if any)?
+- What is the data type of “articles” in the App’s state?
+- What is the data type of the Article’s “onClick” prop?
+- Where is the “isEmpty” util used (file name + line number)?
+- Where is the “map” function called (HINT: 2 files)? Why do we use it?
+- What is the Dropdown’s parent?
+- What is the Header’s parent?
+- Which component contains the “Feedr” text?
+- Which component contains the "News Source" text?
+- Which file takes care of the API calls?
+- BONUS 1: Find a component with a callback as a prop. Which component is it? Which prop is it? Which parent component passes it down?
+- BONUS 2: Which lines in App.js are responsible for setting the "articles" in the App's state to be the data that comes back from the API?

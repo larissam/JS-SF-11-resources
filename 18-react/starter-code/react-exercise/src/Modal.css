@@ -1,0 +1,39 @@
+.modal {
+  display: none;
+}
+
+.modal.open {
+  display: flex;
+  flex-flow: column nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: white;
+}
+
+.modal-close-button {
+  color: #FE052C;
+  font-size: 32px;
+  padding: 20px;
+
+  align-self: flex-end;
+}
+
+.modal-close-button:hover {
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 40px;
+}
+
+.modal-read-more-link {
+  background-color: #FE052C;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  padding: 10px;
+}

@@ -1,0 +1,12 @@
+h1 {
+  color: white;
+}
+
+.header {
+  background-color: #FE052C;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1px 10%;
+}
+
