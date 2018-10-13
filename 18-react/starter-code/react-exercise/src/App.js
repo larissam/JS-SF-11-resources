@@ -21,36 +21,20 @@ class App extends Component {
     }
   }
 
-  onSelectNewsSource(newsSource) {
-    this.setState({
-      selectedNewsSource: newsSource
-    }, () => {
-      NewsService.get(newsSource.id, {}, (articles) => {
-        this.setState({ articles: articles });
-      })
-    });
-  }
-
-  onSelectArticle(article) {
-    this.setState({
-      selectedArticle: article
-    });
-  }
-
   render() {
-    const { articles, selectedArticle } = this.state;
+    const { articles, selectedArticle, selectedNewsSource } = this.state;
     return (
       <div className="App">
         <Header
-          onSelectNewsSource={(newsSource) => this.onSelectNewsSource(newsSource)}
-          selectedNewsSource={this.state.selectedNewsSource}
+          onSelectNewsSource={(newsSource) => this.handleNewsSourceSelect(newsSource)}
+          selectedNewsSource={selectedNewsSource}
           newsSources={newsSources}
         />
         <div className="main">
           {articles.map((article, idx) => (
             <Article
               key={`article-${idx}`}
-              onClick={() => this.onSelectArticle(article)}
+              onClick={() => this.handleArticleSelect(article)}
               title={article.title}
               source={article.source}
               thumbnail={article.thumbnail}
@@ -59,11 +43,27 @@ class App extends Component {
         </div>
         <Modal
           isOpen={ !isEmpty(selectedArticle) }
-          onClose={() => this.onSelectArticle({})}
+          onClose={() => this.handleArticleSelect({})}
           article={ selectedArticle }
         />
       </div>
     );
+  }
+
+  handleArticleSelect(article) {
+    this.setState({
+      selectedArticle: article
+    });
+  }
+
+  handleNewsSourceSelect(newsSource) {
+    this.setState({
+      selectedNewsSource: newsSource
+    }, () => {
+      NewsService.get(newsSource.id, {}, (articles) => {
+        this.setState({ articles: articles });
+      })
+    });
   }
 }
 

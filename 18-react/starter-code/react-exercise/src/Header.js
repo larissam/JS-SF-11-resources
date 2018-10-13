@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './Header.css'
 
 import Dropdown from './Dropdown.js';
 
-class Header extends Component {
+class Header extends PureComponent {
   render() {
     const { newsSources, onSelectNewsSource, selectedNewsSource } = this.props;
     return (

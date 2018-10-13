@@ -11,32 +11,34 @@ class Dropdown extends Component {
     };
   }
 
-  openDropdown() {
-    this.setState({ isOpen: true });
-  }
-
-  updateSelection(idx) {
-    const { onSelectItem, options } = this.props;
-
-    this.setState({ isOpen: false, selectedIdx: idx }, () => {
-      onSelectItem(options[idx], idx);
-    });
-  }
-
   render() {
     const { options, placeholder } = this.props;
     const { isOpen, selectedIdx } = this.state;
 
     return (
       <div className={`dropdown ${isOpen ? 'open' : ''}`}>
-        <div className="dropdown-selected-item" onClick={() => this.openDropdown()}>{ options[selectedIdx] ? options[selectedIdx].label : placeholder }</div>
+        <div className="dropdown-selected-item" onClick={() => this.handleDropdownOpen()}>
+          { options[selectedIdx] ? options[selectedIdx].label : placeholder }
+        </div>
         <div className="dropdown-options">
           { options.map((option, idx) => (
-            <div className="dropdown-option" key={`dropdown-${idx}`} onClick={() => this.updateSelection(idx) }>{ option.label }</div>
+            <div className="dropdown-option" key={`dropdown-${idx}`} onClick={() => this.handleSelectionUpdate(idx) }>{ option.label }</div>
           ))}
         </div>
       </div>
     );
+  }
+
+  handleDropdownOpen() {
+    this.setState({ isOpen: true });
+  }
+
+  handleSelectionUpdate(idx) {
+    const { onSelectItem, options } = this.props;
+
+    this.setState({ isOpen: false, selectedIdx: idx }, () => {
+      onSelectItem(options[idx], idx);
+    });
   }
 }
 

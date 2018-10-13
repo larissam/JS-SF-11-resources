@@ -1,19 +1,15 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './Article.css';
 
-class Article extends Component {
+class Article extends PureComponent {
   render() {
-    const { title, source, thumbnail, onClick } = this.props;
+    const { source, title, thumbnail, onClick } = this.props;
     return (
       <div className="article" onClick={onClick}>
-        <img className="article-thumbnail" src={ thumbnail } />
+        <img className="article-thumbnail" src={thumbnail} />
         <div className="article-info">
-          <h2 className="article-title">
-            { title }
-          </h2>
-          <h3 className="article-source">
-            { source }
-          </h3>
+          <h2 className="article-title">{title}</h2>
+          <h3 className="article-source">{source}</h3>
         </div>
       </div>
     )

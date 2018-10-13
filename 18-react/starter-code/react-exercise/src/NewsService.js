@@ -1,8 +1,10 @@
+import { NEWSAPI_KEY, GUARDIAN_KEY } from "./keys";
+
 const endpoints = {
   NEWSAPI: {
     url: 'https://newsapi.org/v2/top-headlines',
     defaultParams: {
-      apiKey: 'dd591ea74bd0486ea58d22ea637a0b4e',
+      apiKey: NEWSAPI_KEY,
       country: 'us',
     },
     label: 'News API',
@@ -20,7 +22,7 @@ const endpoints = {
   GUARDIAN: {
     url: 'https://content.guardianapis.com/search',
     defaultParams: {
-      'api-key': 'f84b612e-9d72-4f3a-9d45-0a16b96c3cc3',
+      'api-key': GUARDIAN_KEY,
       'show-fields': 'thumbnail,trailText'
     },
     label: 'Guardian API',
@@ -47,12 +49,12 @@ class NewsService {
 
     const params = { ...defaultParams, ...queryParams };
 
-    fetch(`${url}?${queryString(params)}`).then(function(response){
-      return response.json();
-    }).then(function(data){
-      const transformedData = transformer(data);
-      callback(transformedData);
-    })
+    fetch(`${url}?${queryString(params)}`)
+      .then((response) => response.json())
+      .then((data) => {
+        const transformedData = transformer(data);
+        callback(transformedData);
+      })
   }
 }
 
